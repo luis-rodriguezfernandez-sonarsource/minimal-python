@@ -11,6 +11,7 @@ class Person:
         a[5]
     except KeyError:
         raise  # Noncompliant
+    pass
     return self
 
 p1 = Person("John", 36)
