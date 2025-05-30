@@ -2,6 +2,11 @@ class Person:
   def __init__(self, name, age):
     self.name = name
     self.age = age
+    narg=len(sys.argv)
+    if narg == 1:
+       print('@Usage: input_filename nelements nintervals')
+       break
+    return self
 
 p1 = Person("John", 36)
 
