@@ -6,6 +6,21 @@ class Person:
     if narg == 1:
        print('@Usage: input_filename nelements nintervals')
        break
+    if narg == 1:
+       print('@Usage: input_filename nelements nintervals')
+       break
+    if narg == 1:
+       print('@Usage: input_filename nelements nintervals')
+       break
+    if narg == 1:
+       print('@Usage: input_filename nelements nintervals')
+       break
+    if narg == 1:
+       print('@Usage: input_filename nelements nintervals')
+       break
+    if narg == 1:
+       print('@Usage: input_filename nelements nintervals')
+       break
     a = {}
     try:
         a[5]
