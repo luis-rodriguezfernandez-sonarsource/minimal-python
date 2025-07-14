@@ -1,0 +1,30 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: SonarQubePrepare@7
+  inputs:
+    SonarQube: 'lurodrig-sonarqube.ngrok.io'
+    scannerMode: 'cli'
+    cliScannerVersion: '7.1.0.4889'
+    configMode: 'manual'
+    cliProjectKey: 'minimal-python_minimal-python_5e268d23-4c25-45dd-ae34-e4553a831723'
+    cliProjectName: 'minimal-python'
+    cliSources: '.'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.verbose=true
+
+- task: SonarQubeAnalyze@7
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
