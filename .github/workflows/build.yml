@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - test-pr-decoration-for-activity-graph
   pull_request:
     types: [opened, synchronize, reopened]
 
